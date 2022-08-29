@@ -1,0 +1,17 @@
+package kr.or.ddit.board.dao;
+
+import java.sql.SQLException;
+import java.util.List;
+import java.util.Map;
+
+import kr.or.ddit.board.vo.BoardVO;
+
+public class BoardDaoImpl implements IBoardDao{
+
+	@Override
+	public List<BoardVO> selectList(Map<String, Integer> map) throws SQLException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

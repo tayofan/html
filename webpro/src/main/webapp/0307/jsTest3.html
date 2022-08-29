@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+
+<script>
+	//div를 검색 한다.
+	//여러개가 나와서 배열형태
+	function proc() {
+		var vd = document.getElementsByTagName('div');
+		vd[0].innerHTML = "hello~~";
+	}
+</script>
+
+</head>
+<body>
+	<pre>
+	스크립트에서 html요소를 검색 접근
+	id이용 : document.getElementById('id이름')
+	tag이용 : document.getElementsByTagName('tag이름')
+	class이용 : document.getElementsByClassName('class이름')
+	
+	body태크내의 모든 요소(태그)등이 실행되어 브라우저에
+	표현되고 있을때 onclick이벤트에 의해서 div객체를
+	검색해서 Hello 글자를 출력한다.
+	</pre>
+	<input type="button" value="확인" onclick="proc()">
+	<br>
+	<div></div>
+</body>
+</html>

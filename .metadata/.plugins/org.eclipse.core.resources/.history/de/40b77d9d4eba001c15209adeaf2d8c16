@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+</head>
+<body>
+
+<div class="box">
+
+	<pre>
+	</pre>
+
+	<input type="button" value="확인" onclick="proc1()"><br>
+	<div id="result1">
+		<img alt="사진" src="../img/Autry/(W) Autry Medalist Low Goatskin Sneakers White.jpg">
+	</div>
+</div>
+</body>
+</html>

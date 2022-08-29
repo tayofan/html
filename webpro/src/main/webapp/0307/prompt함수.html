@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+
+<script type="text/javascript">
+function proc(){
+	var in1 = parseInt(prompt("정수 1 입력.."));
+	var in2 = parseInt(prompt("정수 2 입력.."));
+	
+	var hap = in1 + in2;
+	
+/* 	str = "입력 1 : " + in1 + "\n";
+	str += "입력 2 : " + in2 + "\n";
+	str += "덧샘결과 : " + hap;
+	
+	alert(str);
+	
+	console.log(str); */
+	
+	str = "입력 1 : " + in1 + "<br>";
+	str += "입력 2 : " + in2 + "<br>";
+	str += "덧샘결과 : " + hap;
+	
+	//div를 검색
+	var vd = document.querySelector("div");
+	vd.innerHTML = str;
+}
+
+function calc(abc){
+	//두 수를 입력
+	su1 = parseInt(prompt("정수 1 입력.."));
+	su2 = parseInt(prompt("정수 2 입력.."));
+	
+	//abc의 값(+,-,*,/)을 비교 - if, switch
+	str1 = "입력 1 : " + su1 + "<br>";
+	str1 += "입력 2 : " + su2 + "<br>";
+	if(abc == "+"){
+		result = su1 + su2;
+		str1 += "덧샘결과 : " + result +"<br>";
+	}else if(abc == "-"){
+		result = su1 - su2;
+		str1 += "뺄샘결과 : " + result +"<br>";
+	}else if(abc == "*"){
+		result = su1 * su2;
+		str1 += "곱샘결과 : " + result +"<br>";
+	}else if(abc == "/"){
+		result = su1 / su2;
+		str1 += "나눗샘결과 : " + result +"<br>";
+	}
+	
+	str1 += su1 + abc + su2 + " = " + result + "<br>";
+	var vd1 = document.getElementById("res");
+	var vd1 = document.querySelector("#res");
+	vd1.innerHTML = str1;
+}
+
+</script>
+</head>
+<body>
+<pre>
+	버튼을 클릭하면 두개의 수를 입력한다.(prompt사용)
+	prompt함수의 리턴결과값을 String이다
+	
+	두 수를 더해서 출력한다. - div요소에
+	더하기 를 위해서 정수로 변환이 필요 - parpseInt
+	
+	요소검색 - es6 - 단수로 검색 - 여러개가 있어도 첫번째 요소만 검색
+	document.querySelector("#aa")
+	document.querySelector(".bb")
+	document.querySelector("div")
+</pre>
+<input type="button" value="확인" onclick="proc()">
+<div></div>
+<hr>
+<input type="button" value="+" onclick="calc('+')">
+<input type="button" value="-" onclick="calc('-')">
+<input type="button" value="*" onclick="calc('*')">
+<input type="button" value="/" onclick="calc('/')">
+<div id="res"></div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;kr.or.ddit.board.controller.List.java&apos; to &apos;ListController.java&apos;&#x0D;&#x0A;- Original project: &apos;board&apos;&#x0D;&#x0A;- Original element: &apos;kr.or.ddit.board.controller.List.java&apos;&#x0D;&#x0A;- Renamed element: &apos;kr.or.ddit.board.controller.ListController.java&apos;" description="Rename compilation unit &apos;List.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src\/main\/java&lt;kr.or.ddit.board.controller{List.java" name="ListController.java" references="false" stamp="1649397882089" version="1.0"/>
+</session>

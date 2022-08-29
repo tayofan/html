@@ -1,0 +1,34 @@
+package kr.or.ddit.board.dao;
+
+import java.sql.SQLException;
+import java.util.List;
+
+import kr.or.ddit.board.vo.ReplyVO;
+
+public class ReplyDaoImpl implements IReplyDao {
+
+	@Override
+	public int updateReply(ReplyVO vo) throws SQLException {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int deleteReply(int reply) throws SQLException {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public List<ReplyVO> replyList(int bonum) throws SQLException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int insertReply(ReplyVO vo) throws SQLException {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

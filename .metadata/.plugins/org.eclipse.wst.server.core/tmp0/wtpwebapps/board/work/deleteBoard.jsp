@@ -1,0 +1,22 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%
+	//서블릿에서 공유 데이터 꺼내기
+	int totalPage = (int)request.getAttribute("totalPage");
+	int num = (int)request.getAttribute("num");
+	
+	if(num > 0){
+%>
+	{
+		"sw"        : "ok",
+		"totalPage" : "<%= totalPage %>"
+	}
+	
+<% }else { %>
+
+	{
+		"sw" : "no"
+	}
+<%		
+	}
+%>

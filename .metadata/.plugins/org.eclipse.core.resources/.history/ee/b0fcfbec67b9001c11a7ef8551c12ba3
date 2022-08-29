@@ -1,0 +1,69 @@
+/**
+ * 
+ */
+ 
+ var listServer = function(){
+	$.ajax({
+		url : '/board/List.do',
+		type : 'post',
+		data : {'page'  : currentPage,
+				'stype' : typeValue,
+				'sword' : wordValue
+		},
+		success : function(res) {
+			str = "<div id='accordion'>";
+			$.each(res.datas,function(i,v){
+				str += '<div class="card">';
+			    str += ' <div class="card-header">';
+			    str += '     <a class="card-link" data-toggle="collapse" href="#collapse' + v.num + '">';
+			    str += v.subject + '</a>';
+			    str += '   </div>';
+			    str += '   <div id="collapse' + v.num + '" class="collapse" data-parent="#accordion">';
+			    str += '     <div class="card-body">';
+			    str += '       <p class="p1">';
+				str += '           작성자 : ' + v.writer + '&nbsp;&nbsp;&nbsp;';
+				str += '           이메일 : ' + v.mail + '&nbsp;&nbsp;&nbsp;';
+				str += '           날짜 : ' + v.wdate + '&nbsp;&nbsp;&nbsp;&nbsp;';
+				str += '           조회수 : ' + v.hit + '&nbsp;&nbsp;';
+			    str += '       </p>';
+			    str += '       <p class="p2">';
+			    str += '           <input type="button" class="action" name="modify" value="수정">';
+			    str += '           <input type="button" class="action" name="delete" value="삭제">';
+			    str += '       </p>';
+			    str += '       <hr>';
+			    str += '       <p class="p3">';
+			    str += v.content;	
+			    str += '       </p>';
+			    str += '       <p class="p4">';
+			    str += '       	<textarea rows="" cols="80"></textarea>';
+			    str += '       	<input type="button" class="action" name="reply" value="등록">';
+			    str += '       </p>';
+			    str += '     </div>';
+			    str += '   </div>';
+			    str += ' </div>';	
+			})
+			str += "</div>";
+			$('.container').html(str);
+			
+			//이전버튼 출력
+			if(res.startPage > 1){
+				pcode = '<ul class="pagination">';
+				pcode += '<li class="page-item">';
+				pcode += '<a class="page-link" href="#"></a>';
+				pcode += '</li>';
+				pcode += '</ul>';
+			}
+			//페이지 목록 출력
+			
+			//다음버튼
+			
+			
+			
+		},
+		error : function(xhr){
+			alert("상태 : " + xhr.status);
+		},
+		dataType : 'json'	
+	});	
+	
+}

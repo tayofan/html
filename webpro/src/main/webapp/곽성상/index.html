@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="mystyle.css">
+</head>
+<body id="mainbody">
+    <header>
+      <h1>
+        <img src="../images/shopping.jpg">
+        <a href="index.html">Web Shopping</a>
+      </h1>
+    </header>
+   
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html">About Us</a></li>
+        <li><a href="index.html">New</a></li>
+        <li><a href="index.html">My Account</a></li>
+        <li><a href="index.html">Contacts</a></li>
+      </ul>
+    </nav>
+    
+    <aside id=“left1”>
+      <ul>
+        <li>
+          <a href="computer.html" target="ifr"> 컴퓨터</a>
+        </li>
+        <li><a href="clothing.html" target="ifr">의류</a></li>
+        <li><a href="스포츠레저.html" target="ifr"> 스포츠/레져</a></li>
+        <li><a href="가구인테리어.html" target="ifr"> 가구/인테리어</a></li>
+        <li><a href="식품.html" target="ifr"> 식품</a></li>
+      </ul>
+    </aside>
+    
+    <section id="main">
+      <article id="article1">
+        <iframe src="computer.html" name="ifr" > 
+        </iframe>
+      </article>
+    </section>
+    
+    <aside id="right">
+      <div id="shopcart">
+        <h4>Shopping Cart</h4>
+        <p>현재 쇼핑카트에 물품이 없습니다.</p>
+        <a href="shopcart.html" target="ifr">쇼핑카트 보기</a>
+      </div>
+    
+      <div id="login">
+        <h4>Log In</h4>
+        <form action="#">
+          <label>아이디</label><br>
+          <input type="text" name="id"><br>
+          
+          <label>패스워드</label><br>
+          <input type="password" name="pass"><br>
+          <input type="submit" value="로그인">
+          <input type="reset" value="초기화"><br>
+          <a href="회원가입.html">회원가입</a>
+          <a href="회원가입.html">비밀번호분실</a>
+          
+        </form>
+      </div>
+    </aside>
+    
+    <footer>
+    Copyright (c)2021 Hong
+    </footer>
+    
+</body>
+</html>

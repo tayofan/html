@@ -1,0 +1,43 @@
+package kr.or.ddit.board.controller;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import kr.or.ddit.board.service.BoardServiceImpl;
+import kr.or.ddit.board.service.IBoardService;
+
+@WebServlet("/List.do")
+public class List extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    public List() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		request.setCharacterEncoding("utf-8");
+		
+		//1. 요청시 전송데이터 받기 - page번호 , stype, sword
+		int rqpage = Integer.parseInt(request.getParameter("page"));
+		String rqtype = request.getParameter("stype");
+		String rqword = request.getParameter("sword");
+		
+		//2. service객체 얻기
+		IBoardService service = BoardServiceImpl.getInstance();
+		
+		//3. service메서드 호출 하기 - 결과값 받기
+		List
+		
+		//4. 결과값으로 응답데이터 생성 - html, text, xml, json 데이터
+		
+		//
+	}
+
+}

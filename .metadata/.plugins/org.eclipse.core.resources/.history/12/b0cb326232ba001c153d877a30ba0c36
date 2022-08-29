@@ -1,0 +1,44 @@
+package kr.or.ddit.board.dao;
+
+import java.sql.SQLException;
+import java.util.List;
+
+import com.ibatis.sqlmap.client.SqlMapClient;
+
+import kr.or.ddit.board.vo.ReplyVO;
+import kr.or.ddit.ibatis.config.SqlMapClientFactory;
+
+public class ReplyDaoImpl implements IReplyDao {
+	private SqlMapClient smc;
+	private static IReplyDao dao;
+	private ReplyDaoImpl() {
+		smc = SqlMapClientFactory.getSqlMapClient();
+	}
+	public static IReplyDao getInstance() {
+		if(dao==null) dao = new ReplyDaoImpl();
+		return dao;
+	}
+
+	@Override
+	public int updateReply(ReplyVO vo) throws SQLException {
+		return 0;
+	}
+
+	@Override
+	public int deleteReply(int reply) throws SQLException {
+		return 0;
+	}
+
+	@Override
+	public List<ReplyVO> replyList(int bonum) throws SQLException {
+		// TODO Auto-generated method stub
+		return smc.queryForList("reply.replyList", bonum);
+	}
+
+	@Override
+	public int insertReply(ReplyVO vo) throws SQLException {
+		// TODO Auto-generated method stub
+		return smc.insert("reply.insertReply", vo);
+	}
+
+}

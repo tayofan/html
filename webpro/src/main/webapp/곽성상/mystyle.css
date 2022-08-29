@@ -1,0 +1,180 @@
+/*공통*/
+body{
+	margin: 0px auto;
+}
+
+/*index.html*/
+body#mainbody{
+	width: 1200px;
+	box-sizing: border-box;
+}
+
+aside {
+	background: #7F8B9A;
+ 	width:20%;
+  	height:453px;
+ 	float:left;
+}
+
+#right{
+ 	 background: rgb(192, 192, 192);
+ 	 width:18%;
+ 	 float:right;
+	 height:450px;
+	 padding-left: 15px;
+}
+iframe{
+	float: left;
+	width: 58%;
+	height: 450px;
+	padding: 0px;
+}
+
+aside ul { 	
+  width:100%;
+  background: #7F8B9A;
+  list-style:none; 
+  padding:20px 0;
+  float: left;
+}
+aside ul li { 	
+  text-transform:uppercase; 
+  padding:8px 10px;
+  border: 1px solid black;
+  background: #555C65;
+}
+aside ul li a { text-decoration:none; color:white; }
+aside ul li a:hover, a:visited { text-decoration:none; }
+
+h1 {
+  background : skyblue;
+  width: 100%;
+  height:90px;
+  font-size:1.5em;
+  margin: 0px 0px;
+  line-height: 90px;
+}
+
+header img{
+	position: relative;
+	top:15px;
+	width: 50px;
+	height: 50px;
+}
+
+nav ul { 	
+  list-style:none; text-align:center; 
+  border-top:1px dotted green;
+  border-bottom:1px solid green; padding:20px 0;
+}
+nav ul li { 	
+  display:inline; text-transform:uppercase; 
+  padding:0px 10px; letter-spacing:5px; 
+}
+nav ul li a { text-decoration:none; color:black; }
+nav ul li a:hover, a:visited { text-decoration:none; }
+h1 a:hover, a:visited { text-decoration:none; }
+h1 a { text-decoration:none; color:black; }
+
+footer{	
+	width: 100%;
+	height: 40px;
+	background: #CC99FF;
+	text-align: center;
+	clear: both;
+	padding-top: 10px;
+	align-items: center;
+}
+
+#login input[type="submit"], input[type="reset"]{
+	margin: 15px 0px;
+}
+#right h4{
+	font-size: 1.5em;
+}
+
+
+
+/*컴퓨터,가구,식품 등......*/
+form.comdiv{
+	border: 1px solid black;
+	width: 32%;
+	height: 430px;
+	float: left;
+	margin-left: 5px;
+	padding-top: 10px;
+}
+.com{
+	width: 100%;
+	display: block; margin: 0px auto;
+	margin: 0px auto;
+	
+}
+.p1{
+	font-size: 0.8em;
+}
+.comdiv div{
+	margin-left:10px;
+	width: 90%;
+	height: 150px;
+	font-size: 0.9em;
+}
+.comdiv input, .comdiv>span{
+	margin-left: 10px;
+}
+
+
+/*회원가입 페이지*/
+fieldset label{
+	width: 150px;
+	display : inline-block;
+}
+
+fieldset{
+	width: 500px;
+	margin: 0px auto;
+	padding: 20px 50px;
+	height: auto;
+}
+
+fieldset input{
+	margin-bottom: 10px;
+}
+
+fieldset input[type="submit"], fieldset input[type="reset"] {
+	width: 49%;
+}
+fieldset span {
+	margin-right: 30px;
+}
+
+/*장바구니페이지*/
+table {
+	width: 600px;
+	border-collapse: collapse;
+	border: 2px solid gray;
+	margin: 0px auto;
+}
+th, td{
+	border: 1px solid gray;
+	text-align: center;
+	height: 40px;
+}
+table input[type="text"]{
+	width: 90%;
+	height:25px;
+	text-align: center;
+}
+
+#th1 {width: 25%;}
+#th2 {width: 30%;}
+#th3 {width: 15%;}
+#th4 {width: 30%;}
+
+#cart{
+	width:600px;
+	margin: 0px auto;
+	text-align: center;
+}
+
+

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<style type="text/css">
+	img{
+		width: 100px;
+		height: 100px;
+		border-radius: 50%; 
+	}
+</style>
+<script type="text/javascript">
+	function proc1(but){
+		//스타일로 설정된 테두리를 지움 - border = none
+ 		
+		
+		//시작버튼감추기 - 더이상 클릭하지 못하도록
+		but.style.display = "none";
+		globut = but;
+		
+		//result1을 검색
+		vres1 = document.getElementById("result1");
+		
+		//a = 1초마다 한번씩 실행 - setInterval
+ 		a = setInterval(function(){
+ 			//result1의 첫번째자식 선택
+			child = vres1.firstChild;
+			
+			//마지막자식으로 추가
+			vres1.appendChild(child);
+ 		},500);
+	}
+	
+	function stop(){
+		//시작버튼 보이기
+		globut.style.display = "inline";
+		
+		//랜덤발생 - 0~이미지개수만큼
+		ran = parseInt(Math.random()*child.length);
+		
+		//랜덤발생된 번째자식이미지에 스타일로 border 설정
+		child.style.border = "5px solid red";
+		
+		//회전 정지
+		clearInterval(a);
+	}
+</script>
+</head>
+<body>
+	<div class="box">
+		<pre>
+		result1의 첫번째자식(img)을 선택한다 - firstCild
+		선택한자식을 맨마지막자식으로 추가한다 - appendChild()
+		appendChild()수행시 기존의 존재하는 요소를 대상으로 작업시 이동의 효과가 있다(잘라내기-붙여넣기) 
+		</pre>
+		<input type="button" value="시작" onclick="proc1(this)">
+		<input type="button" value="종료" onclick="stop()">
+		<div id="result1">
+		<img src="../images/국화.jpg" alt="">
+		<img src="../images/국화1.jpg" alt="">
+		<img src="../images/국화2.jpg" alt="">
+		<img src="../images/국화3.jpg" alt="">
+		<img src="../images/국화4.jpg" alt="">
+		<img src="../images/국화5.jpg" alt="">
+		<img src="../images/국화6.jpg" alt="">
+		<img src="../images/국화7.jpg" alt="">
+		</div>
+	</div>
+</body>
+</html>

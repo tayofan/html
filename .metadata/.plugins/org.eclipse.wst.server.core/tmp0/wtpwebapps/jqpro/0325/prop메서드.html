@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<script src="../js/jquery-3.6.0.min.js"></script>
+<script>
+	$(function(){
+		//runBtn 이 사용가능한 상태이면 배경색(background)을 파랑 
+		//사용불가능한 상태이면 배경색을 빨강으로 변경
+		
+		if($('#runBtn').prop('disabled')){
+			$('#runBtn').css('background','red');
+		}
+		else{
+			$('#runBtn').css('background', 'blue');
+		}
+		
+		console.log("chk=" + $('#checkTest').prop('checked'));
+		console.log("select=" + $("#selTest option").eq(2).prop("selected"));
+		console.log("text=" + $('#txtTest').prop('readonly'));
+		console.log("btn=" +$('#runBtn').prop('disabled'));
+		
+		//버튼 클릭 각각의 상테 값을 반대로 설정
+		$('#btn1').on('click',function(){
+			chk = $('#checkTest').prop('checked');
+			$('#checkTest').prop('checked', !chk);
+			
+			btn = $('#runBtn').prop('disabled');
+			$('#runBtn').prop('disabled',!btn);
+			
+			txt = $('#txtTest').prop('readonly');
+			$('#txtTest').prop('readonly',!txt);
+			
+			sel = $("#selTest option").eq(2).prop("selected");
+			$("#selTest option").eq(2).prop("selected",!sel);
+			
+			if($('#runBtn').prop('disabled')){
+				$('#runBtn').css('background','red');
+			}
+			else{
+				$('#runBtn').css('background', 'blue');
+			}
+		})
+		
+		$('#all').on('change',function(){
+// 			//전체 선택의 상태값을 얻는다
+// 			check = $(this).prop('checked');
+// 			console.log(check);
+			
+			
+// 			//check값을 1,2,3,4,5에 설정한다.
+// 			$('.chk').prop('checked',check);
+			
+			check = $(this).attr('checked');
+			console.log(check);
+		})
+		
+		
+	})
+</script>
+
+</head>
+<body>
+
+<div class="box">
+
+	<pre>
+	prop() : 속성의 상태값을 얻거나 설정
+	상태 : checked, selected, disabled, readonly, multiple
+	get실행시 리턴값은 true / false
+	$(this).prop('checked')
+	
+	set실행시 true / false로 설정
+	$(this).prop('checked',true)
+	</pre>
+
+	<input type="button" value="확인" id="btn1">
+	
+</div>
+
+<div id="result1">
+	<form>
+		체크박스(라디오버튼) :    
+		<input type="checkbox" id="checkTest" checked="checked"><br><br>
+		
+		리스트박스(select객체) : 
+		<select id="selTest">
+			<option value="1">하나</option>
+			<option value="2">둘</option>
+			<option value="3" selected >셋</option>
+			<option value="4">넷</option>
+		</select><br><br>
+		
+		text객체 : 
+		<input readonly="readonly" type="text" value="가나다" id="txtTest"><br><br>
+		
+		button객체(disabled) : 
+		<input type="button" onclick="alert('hello')" value="실행" id="runBtn" >
+	</form>
+
+</div>
+
+<div class="box">
+
+	<pre>
+	checkbox의 change이벤트
+	
+	전체선택에 checked상태값을 얻는다
+	상태값으로 1,2,3,4,5의 상태값을 설정한다.
+	</pre>
+	
+	<input type="checkbox" id="all"> 전체선택
+	
+	<input type="checkbox" class="chk">1
+	<input type="checkbox" class="chk">2
+	<input type="checkbox" class="chk">3
+	<input type="checkbox" class="chk">4
+	<input type="checkbox" class="chk">5
+	
+</div>
+
+</body>
+</html>

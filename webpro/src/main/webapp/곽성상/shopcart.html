@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="mystyle.css">
+<script type="text/javascript">
+function calculate() {
+	var price = document.getElementsByClassName('price');
+	var qty = document.getElementsByClassName('qty');
+	var num = 0;
+	
+ 	for(let i = 0; i < price.length; i++){
+		num += parseInt(((price[i].firstChild.data).replace(/,/g , "")).replace('원',"")) * parseInt(qty[i].value);
+	}
+	
+	var num2 = num.toLocaleString();
+	
+	
+	alert(num2);
+}
+</script>
+</head>
+<body>
+<form>
+	<table border="1">
+		<tr>
+			<th id="th1">품목</th>
+			<th id="th2">가격</th>
+			<th id="th3">수량</th>
+			<th id="th4">합계</th>
+		</tr>
+		
+		<tr>
+			<td>컴퓨터 세트</td>
+			<td class="price">2,000,000원</td>
+			<td><input class="qty" type="text" value="0"></td>
+			<td><input type="text" value="0"></td>
+		</tr>
+		<tr>
+			<td>티셔츠</td>
+			<td class="price">20,000원</td>
+			<td><input class="qty" type="text" value="0"></td>
+			<td><input type="text" value="0"></td>
+		</tr>
+		<tr>
+			<td>음악파일</td>
+			<td class="price">500원</td>
+			<td><input class="qty" type="text" value="0"></td>
+			<td><input type="text" value="0"></td>
+		</tr>
+		<tr>
+			<td>영화파일</td>
+			<td class="price">5,000원</td>
+			<td><input class="qty" type="text" value="0"></td>
+			<td><input type="text" value="0"></td>
+		</tr>
+	</table>
+	<div id="cart">
+	<input type="button" value="계산" onclick="calculate()">
+	<input type="submit" value="구매">
+	<input type="reset" value="초기화">
+	</div>
+</form>
+</body>
+</html>

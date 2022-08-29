@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE sqlMap
+	PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+	"http://ibatis.apache.org/dtd/sql-map-2.dtd">
+	
+<sqlMap namespace="zip">
+	<select id="zipList" resultClass="zipVo" parameterClass="String">
+		select * from ziptb where dong like #data#||'%' ORDER by 1
+	</select>
+	
+	<select id="selectSido" resultClass="String">
+		select distinct sido from ziptb ORDER by 1
+	</select>
+	
+	<select id="selectGugun" resultClass="String" parameterClass="String">
+		select DISTINCT gugun from ziptb where sido = #data# ORDER by 1
+	</select> 
+	
+	<select id="selectDong" resultClass="String" parameterClass="Map">
+		select DISTINCT nvl(trim(SUBSTR(dong, 0, INSTR(dong, ' '))),dong) from ziptb where sido = #sido# and GUGUN = #gugun#
+		ORDER by 1
+	</select>
+	
+	<select id="selectAll" resultClass="kr.or.ddit.zip.vo.ZipVO" parameterClass="Map">
+		select * from ziptb where sido = #sido# and GUGUN = #gugun# and dong like #dong#||'%' ORDER by 1
+	</select>
+	
+	
+</sqlMap>
